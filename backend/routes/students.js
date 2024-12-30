@@ -42,7 +42,7 @@ router.put('/:id', async(req,res)=>{
     try {
         const id = req.params.id;
         const student = req.body;
-        const updatedStudent = student.findOneAndUpdate(
+        const updatedStudent = await Student.findOneAndUpdate(
             {
                 _id: id 
             },

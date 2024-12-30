@@ -8,7 +8,9 @@ const StudentSchema = mongoose.Schema(
         },
         usn: {
             type: String,
-            required: true
+            required: true,
+            unique: true
+            
         },
         section:{
             type: String,
@@ -16,7 +18,8 @@ const StudentSchema = mongoose.Schema(
         },
         email:{
             type: String,
-            required: true
+            required: true,
+            unique: true
         },
         phone: {
             type: String,
