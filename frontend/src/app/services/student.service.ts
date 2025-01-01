@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Student } from '../models/student.model';
 import { Observable } from 'rxjs';
+// rxjs means React extension for Javascript
+//Observable is core-concept in rxjs used for handling http requests , user inputs and asynchronous tasks.
 
 @Injectable({
   providedIn: 'root'
