@@ -1,3 +1,29 @@
 
 <h5>Students List</h5>
 <button mat-raised-button [routerLink]="'/create'">Create New Student</button>
+
+
+<div *ngFor="let student of students" class="mat-elevation-z2 p-2 my-2 d-flex align-items-center">
+    
+   <div class="">
+    {{student.name}}
+    {{student.usn}}
+    {{student.section}}
+    {{student.email}}
+    {{student.phone}}
+   </div>
+   <div class="ms-auto">
+    <button mat-icon-button [routerLink]="'/edit/'+ student._id">
+        <mat-icon>edit</mat-icon>
+    </button>
+
+    <button mat-icon-button [routerLink]="'/details/'+ student._id">
+        <mat-icon>visibility</mat-icon>
+    </button>
+
+     <button mat-icon-button color="warn" (click)="onDeleteClick(student)">
+        <mat-icon>cancel</mat-icon>
+     </button>
+   </div>
+    
+</div>
